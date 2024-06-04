@@ -1,0 +1,11 @@
+version: '3'
+services:
+  nagios:
+    image: "bodyno33/nagios:1.0.0"
+    build: 
+      context: "./"
+      dockerfile: "Dockerfile"
+    container_name: nagiosprueba
+    ports:
+      - "8085:80"
+    restart: always
